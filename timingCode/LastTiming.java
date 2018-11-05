@@ -1,10 +1,14 @@
 import java.util.Arrays;
 
 public class LastTiming {
+
+    private static int[] arrayOne = new int[] {1,2,3};
+
     public static void main (String[] args) {
-        int[] arrayOne = new int[] {1,2,3};
+        long startTime= System.nanoTime();
         int number = last(arrayOne);
-        System.out.println(number);
+        long endTime = System.nanoTime();
+        System.out.println("It took " + (endTime - startTime) + " ns");
     }
 
     public static int last(int[] arr) {
