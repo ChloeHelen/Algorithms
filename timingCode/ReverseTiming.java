@@ -2,18 +2,14 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class LastTiming {
+public class ReverseTiming {
 
     public static void main (String[] args) {
-        ArrayList<Integer> arrayOne = addToArray(1000);
+        ArrayList<Integer> ArrayOne = addToArray(1000);
         long startTime= System.nanoTime();
-        int number = last(arrayOne);
+        Collections.reverse(ArrayOne);
         long endTime = System.nanoTime();
         System.out.println("It took " + (endTime - startTime) + " ns");
-    }
-
-    public static int last(ArrayList<Integer> arr) {
-        return arr.get(arr.size() - 1);
     }
 
     public static ArrayList<Integer> addToArray(int times){
